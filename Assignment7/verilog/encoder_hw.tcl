@@ -97,7 +97,7 @@ set_interface_property s0 readLatency 3
 set_interface_property s0 printableDevice false
 set_interface_property s0 ASSOCIATED_CLOCK clock_reset
 
-add_interface_port s0 slave_address address Input 9 
+add_interface_port s0 slave_address address Input 3 
 add_interface_port s0 slave_read read Input 1
 add_interface_port s0 slave_write write Input 1
 add_interface_port s0 slave_readdata readdata Output -1

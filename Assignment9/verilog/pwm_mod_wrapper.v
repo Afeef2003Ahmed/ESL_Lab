@@ -15,8 +15,7 @@ module pwm_mod_wrapper #(
 
     output wire        INA,
     output wire        INB,
-    output wire        pwm_out,
-    output wire        led_out
+    output wire        pwm_out
 );
 
 reg [31:0] mem;
@@ -39,7 +38,6 @@ pwm_mod #(
     .pwm_out   (pwm_out)
 );
 
-assign led_out = pwm_out;
 
 always @(posedge clk or posedge reset) begin
     if (reset) begin

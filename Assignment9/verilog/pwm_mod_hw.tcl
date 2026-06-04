@@ -109,14 +109,7 @@ add_interface_port s0 slave_write     write     Input  1
 add_interface_port s0 slave_readdata  readdata  Output -1
 add_interface_port s0 slave_writedata writedata Input  -1
 
-##
-## - H-bridge output conduit
-##   Exports INA, INB and PWM_OUT to the top-level FPGA pins.
-##
-##   Register map (single 32-bit word):
-##     Bit 31     : enable     (1 = running)
-##     Bit 30     : direction  (0 = forward, 1 = reverse)
-##     Bits [6:0] : duty cycle (0-100 %)
+
 ##
 add_interface pwm_interface conduit end
 add_interface_port pwm_interface INA     export Output 1
