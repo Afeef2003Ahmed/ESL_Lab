@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     data.frame_count = 0;
     
     data.pipeline = gst_pipeline_new("pipeline");
-    source = gst_element_factory_make("videotestsrc", NULL);
+    source = gst_element_factory_make("camera-source", NULL);
     encoder = gst_element_factory_make("jpegenc", NULL);
     decoder = gst_element_factory_make("jpegdec", NULL);
     sink = gst_element_factory_make("appsink", NULL);
@@ -91,11 +91,11 @@ int main(int argc, char *argv[])
                               NULL); */
 
 
-    caps = gst_caps_new_simple("video/x-raw",  
+    /*caps = gst_caps_new_simple("video/x-raw",  
                            "width", G_TYPE_INT, 320,
                            "height", G_TYPE_INT, 240,
                            "framerate", GST_TYPE_FRACTION, 30, 1,
-                           NULL);
+                           NULL); */
     
     gst_bin_add_many(GST_BIN(data.pipeline), source, encoder, decoder, sink, NULL);
     
